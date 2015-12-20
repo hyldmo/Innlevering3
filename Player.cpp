@@ -33,7 +33,8 @@ void Player::Update(uint8_t deltaTime)
 {
 	int baseX, baseY;
 
-	baseX = 522;
+	//defalt values for joystick
+	baseX = 522; 
 	baseY = 512;
 
 
@@ -72,7 +73,6 @@ void Player::Update(uint8_t deltaTime)
 
 void Player::Draw()
 {
-	//Renderer::drawBMP(newX, newY, img);
 	Renderer::bmpDraw("plane35.bmp", newX, newY);
 }
 

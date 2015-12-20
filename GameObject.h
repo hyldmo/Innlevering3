@@ -13,7 +13,7 @@ public:
 	virtual void Update(uint8_t deltaTime) = 0; //deltaTime is in milliseconds
 	virtual void Draw() = 0;
 	
-	static uint8_t x, y;
+	uint8_t x, y;
 
 protected:
 
