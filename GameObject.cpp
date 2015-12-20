@@ -18,7 +18,7 @@ GameObject::~GameObject()
 {
 }
 
-void GameObject::Update(unsigned long deltaTime)
+void GameObject::Update(uint8_t deltaTime)
 {
 }
 

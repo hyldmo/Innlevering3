@@ -9,9 +9,14 @@ public:
 	Player(uint8_t _x, uint8_t _y);
 	~Player();
 
-	void Update(unsigned long deltaTime) override;
+	void Update(uint8_t deltaTime) override;
 	void Draw() override;
+
+	uint8_t width, height;
 private:
+
+	float xVel, yVel;
+	
 
 	Renderer::Image img;
 };

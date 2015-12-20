@@ -13,7 +13,7 @@ public:
 
 	T pool[max_items];
 
-	void UpdateAll(unsigned long deltaTime);
+	void UpdateAll(uint8_t deltaTime);
 
 private: 
 
@@ -49,7 +49,7 @@ void PoolFactory<T, max_items>::NewItem(uint8_t x, uint8_t y)
 }
 
 template <class T, uint8_t max_items>
-void PoolFactory<T, max_items>::UpdateAll(unsigned long deltaTime)
+void PoolFactory<T, max_items>::UpdateAll(uint8_t deltaTime)
 {
 	for (int i = 0; i < max_items; i++)
 	{

@@ -7,7 +7,7 @@ Bullet::Bullet()
 	y = 200;
 }
 
-Bullet::Bullet(const int _x, const int _y)
+Bullet::Bullet(const uint8_t _x, const uint8_t _y)
 {
 	active = true;
 	x = _x;
@@ -21,7 +21,7 @@ void Bullet::Draw()
 	Renderer::Get()->fillCircle(x, y, 1, ST7735_BLUE);
 }
 
-void Bullet::Update(unsigned long deltaTime)
+void Bullet::Update(uint8_t deltaTime)
 {
 	if(active) {
 		Renderer::Get()->fillCircle(x, y, 1, ST7735_BLACK);
@@ -33,7 +33,7 @@ void Bullet::Update(unsigned long deltaTime)
 	}
 }
 
-void Bullet::Init(const int _x, const int _y) {
+void Bullet::Init(const uint8_t _x, const uint8_t _y) {
 	active = true;
 	x = _x;
 	y = _y;

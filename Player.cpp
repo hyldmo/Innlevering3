@@ -29,7 +29,7 @@ Player::Player(uint8_t _x, uint8_t _y)
 Player::~Player() {
 }
 
-void Player::Update(unsigned long deltaTime)
+void Player::Update(uint8_t deltaTime)
 {
 	int baseX, baseY;
 

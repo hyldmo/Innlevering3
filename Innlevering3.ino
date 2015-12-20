@@ -18,13 +18,13 @@ Background* bg;
 Player* player;
 const int poolSize = 20; //refactor this
 //Bullet* bulletPool[poolSize];
-PoolFactory<Bullet, 16> bulletPool;
-PoolFactory<Enemy, 8> enemyPool;
+PoolFactory<Bullet, 20> bulletPool;
+//PoolFactory<Enemy, 8> enemyPool;
 
 int count;
 
 unsigned long newTime;
-unsigned long deltaTime;
+uint8_t deltaTime;
 unsigned long oldTime;
 
 void setup()
@@ -40,8 +40,8 @@ void setup()
 	xInc = 0;
 	count = 0;
 	player = new Player(5, Renderer::Get()->height() / 2);
-	bg = new Background(10);
-	bulletPool = PoolFactory<Bullet, 16>();
+	//bg = new Background(10);
+	bulletPool = PoolFactory<Bullet, 20>();
 	//enemyPool = new PoolFactory<Enemy, 8>;
 	newTime = millis();
 
@@ -57,10 +57,10 @@ void loop() {
 	player->Update(deltaTime);
 	if (digitalRead(6))
 	{
-		//bulletPool->NewItem(player->x + player->width, player->y + player->height / 2);
+		bulletPool.NewItem(player->x + player->width, player->y + player->height / 2);
 	}
 
-	//bulletPool->UpdateAll(deltaTime);
+	bulletPool.UpdateAll(deltaTime);
 	//enemyPool->UpdateAll(deltaTime);
 	
 	/*
